@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from LittleLemonDRF import views
+from Restaurant import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/',include('LittleLemonDRF.urls')),
+    path('api/',include('Restaurant.urls')),
     path('about/', views.about),
     path('home', views.home),
     path('auth/', include('djoser.urls')),

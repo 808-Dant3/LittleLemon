@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('category', views.CategoriesView.as_view()),
+    path('index', views.index, name='index'),
 
     path('menu-items', views.MenuItemsView.as_view()),
     path('menu-items/<int:id>', views.single_item),

@@ -30,6 +30,8 @@ class RatingsView(generics.ListCreateAPIView):
          return []
         return [IsAuthenticated()]
 
+def index(request):
+    return(render(request, 'index.html'))
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
 def menu_items(request):
